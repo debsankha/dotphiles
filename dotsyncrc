@@ -18,6 +18,7 @@
 [files]
 # Uncomment examples below
 dotsyncrc
+i3
 #ack/ackrc
 #aptitude
 #bin:bin
