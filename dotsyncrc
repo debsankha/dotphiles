@@ -19,9 +19,9 @@
 # Uncomment examples below
 dotsyncrc
 i3
+bin:bin
 #ack/ackrc
 #aptitude
-#bin:bin
 #ctags/ctags
 #cmus
 #curl/curlrc
