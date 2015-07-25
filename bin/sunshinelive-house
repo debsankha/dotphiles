@@ -1,0 +1,2 @@
+#!/bin/bash
+vlc -I ncurses http://stream.sunshine-live.de/house/mp3-128/stream.sunshine-live.de/
