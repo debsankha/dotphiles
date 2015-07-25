@@ -20,6 +20,7 @@
 dotsyncrc
 i3
 bin:bin
+gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
 #ack/ackrc
 #aptitude
 #ctags/ctags
