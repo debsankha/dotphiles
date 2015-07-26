@@ -34,4 +34,7 @@ mutt/mailboxes.*
 mutt/smime/*
 mutt/certificates
 task/task/*.data
-
+atom/.node-gyp/*
+atom/compile-cache/*
+atom/storage/*
+atom/.apm/*

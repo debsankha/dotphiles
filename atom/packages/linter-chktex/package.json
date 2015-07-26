@@ -1,0 +1,53 @@
+{
+  "name": "linter-chktex",
+  "main": "./lib/linter-chktex",
+  "version": "1.0.0",
+  "description": "Linter plugin for LaTeX, using chktex",
+  "keywords": [
+    "tex",
+    "latex",
+    "lint",
+    "linter",
+    "chktex"
+  ],
+  "activationCommands": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nscaife/linter-chktex"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {},
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "# linter-chktex package\n\nThis Atom package provides a [Linter](https://github.com/AtomLinter/linter) interface for the LaTeX `chktex` utility.  It provides real-time stylistic suggestions as you write.\n\n## Installation\n\n1. Install the Linter package. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).  \n2. Install `chktex` if it is not already installed.  `chktex` is installed by default with [TeX Live](https://www.tug.org/texlive/), but you may have to install it separately with other distributions.\n3. `apm install linter-chktex`\n4. If `chktex` is not in your PATH, you will need to set the `executablePath` to point to the directory containing `chktex`.\n\n## Settings\nYou can configure linter-chktex by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):\n```\n'linter-chktex':\n    executablePath: \"C:\\\\texlive\\\\2014\\\\bin\\\\win32\"\n```\n\n## Contributing\nIf you would like to contribute, please submit a pull request!\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/nscaife/linter-chktex/issues"
+  },
+  "homepage": "https://github.com/nscaife/linter-chktex",
+  "_id": "linter-chktex@1.0.0",
+  "_shasum": "22a3ed73590f51f30a4758904d7fa0621cd86ecc",
+  "_resolved": "file:../d-115625-7562-1re00u3/package.tgz",
+  "_from": "../d-115625-7562-1re00u3/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/linter-chktex.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

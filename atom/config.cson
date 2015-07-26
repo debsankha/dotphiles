@@ -1,0 +1,27 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    autoHideMenuBar: true
+    projectHome: "/home/sorge/repos"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    audioBeep: false
+    disabledPackages: [
+      "latex-completions"
+      "exception-reporting"
+    ]
+  editor:
+    invisibles: {}
+    fontFamily: "Source Code Pro"
+    tabLength: 4
+    showLineNumbers: false
+    fontSize: 13
+    scrollPastEnd: true
+    softWrap: true
+  minimap:
+    absoluteMode: true
+  Zen:
+    softWrap: true

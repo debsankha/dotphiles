@@ -21,6 +21,7 @@ dotsyncrc
 i3
 bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
+atom
 #ack/ackrc
 #aptitude
 #ctags/ctags
