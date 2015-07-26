@@ -38,3 +38,4 @@ atom/.node-gyp/*
 atom/compile-cache/*
 atom/storage/*
 atom/.apm/*
+atom/nohup.out
