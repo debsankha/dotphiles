@@ -30,3 +30,7 @@ if [[ -f $DIR/packages/apt ]]; then
   sudo apt-get install $packages
 fi
 
+# install atom
+wget -O $DIR/atom.deb https://atom.io/download/deb
+sudo dpkg -i $DIR/atom.deb
+rm $DIR/atom.deb
