@@ -1,0 +1,47 @@
+#!/bin/bash
+ 
+# bail out if tun0 is not connected to Fassberg
+ifconfig tun0 || exit
+#NET=`ifconfig tun0 | awk '/inet/{print $2}' | sed -e 's/[^\.]*$//'`
+#echo ${NET} | grep -q "${FASSBERGNET}" || exit
+
+
+#get the gateway fot the VPN connection
+ 
+VPN=$(ifconfig tun0 | grep -oE 'inet addr:[0-9]*\.[0-9]*\.[0-9]*\.' | awk -F ":" '{print $2}')
+ 
+if echo $VPN | grep "10.219"	#detecting if we are connected to bunsenstrasse of Fassberg
+	then NET='BS'	
+	else NET='FB'
+fi
+ 
+ 
+gw=${VPN}1	#this is the vpn gateway
+ 
+ 
+if [ "$1" = "loginfb" ]
+	then 
+		if [ "$NET" = "FB" ]
+			then ssh $gw -W localhost:22
+			else ssh $gw -W 134.76.222.44:22
+		fi
+fi
+ 
+if [ "$1" = "loginbs" ]
+	then 
+		if [ "$NET" = "BS" ]
+			then ssh $gw -W localhost:22
+			else ssh $gw -W 134.76.222.40:22
+		fi
+fi
+ 
+if echo $1 | grep -E "wotan|frigg|skadi|fulla|nanna"
+	then ssh loginfb -W $1:22
+fi
+ 
+if echo $1 | grep fb
+        then 
+              HOST=`echo $1 | sed -e 's/^fb-//'`
+              ssh loginfb -W $HOST:22
+ 
+fi
