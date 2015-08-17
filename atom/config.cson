@@ -1,8 +1,9 @@
 "*":
+  "exception-reporting":
+    userId: "e4298220-e885-6af2-5ff4-1044af9eae5d"
   welcome:
     showOnStartup: false
   core:
-    autoHideMenuBar: true
     projectHome: "/home/sorge/repos"
     themes: [
       "one-dark-ui"
@@ -12,16 +13,64 @@
     disabledPackages: [
       "latex-completions"
       "exception-reporting"
+      "atom-beautify"
+      "atom-python-debugger"
+      "autocomplete-python"
+      "highlight-line"
+      "language-latex"
+      "latex"
+      "linter-chktex"
+      "linter-pep257"
+      "markdown-preview-plus"
+      "linter-python-pyflakes"
+      "linter-python-pep8"
+      "python-isort"
+      "texlicious"
+      "autocomplete-bibtex"
+      "ex-mode"
+      "latexer"
+      "minimap"
+      "archive-view"
+      "autocomplete-atom-api"
+      "autocomplete-css"
+      "autocomplete-html"
+      "deprecation-cop"
+      "dev-live-reload"
+      "language-clojure"
+      "language-coffee-script"
+      "language-csharp"
+      "language-go"
+      "language-java"
+      "language-less"
+      "language-mustache"
+      "language-objective-c"
+      "language-property-list"
+      "language-sass"
+      "language-toml"
+      "metrics"
+      "release-notes"
+      "spell-check"
+      "welcome"
+      "styleguide"
     ]
+    autoHideMenuBar: true
   editor:
     invisibles: {}
     fontFamily: "Source Code Pro"
     tabLength: 4
     showLineNumbers: false
-    fontSize: 13
     scrollPastEnd: true
     softWrap: true
   minimap:
     absoluteMode: true
   Zen:
     softWrap: true
+  "highlight-line":
+    enableBackgroundColor: false
+  "atom-beautify":
+    _analyticsUserId: "a346902f-9ff9-4be4-8ffa-cf0bf68cafeb"
+  "linter-pep257": {}
+  texlicious: {}
+  "linter-pylint": {}
+  "spell-check": {}
+  "status-bar": {}

@@ -28,11 +28,11 @@ latexmkrc/latexmkrc
 #ctags/ctags
 #cmus
 #curl/curlrc
-#git/gitconfig
-#git/gitignore
-#git/gitattributes
-#git/tigrc
-#git/gitk
+git/gitconfig
+git/gitignore
+git/gitattributes
+git/tigrc
+git/gitk
 #gnupg
 #grc
 #input/editrc

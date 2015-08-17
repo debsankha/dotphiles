@@ -5,7 +5,8 @@ CiteView = require './cite-view'
 module.exports =
   class LatexerHook
     beginRex: /\\begin{([^}]+)}/
-    refRex: /\\(ref|eqref|cite|textcite){$/
+    refRex: /\\(ref|eqref|cref){$/
+    citeRex: /\\(cite|textcite|citet|citep|citet\*|citep\*)(\[[^\]]+\])?{$/
     constructor: (@editor) ->
       @disposables = new CompositeDisposable
       @disposables.add @editor.onDidChangeTitle => @subscribeBuffer()
@@ -41,9 +42,10 @@ module.exports =
       pos = @editor.getCursorBufferPosition().toArray()
       line = @editor.getTextInBufferRange([[pos[0], 0], pos])
       if (match = line.match(@refRex))
-        @lv.show(@editor) if match[1] is "ref" or match[1] is "eqref"
-        @cv.show(@editor) if match[1] is "cite" or match[1] is "textcite"
-      #Check if the previous line contains a \beging{something} or \[.
+        @lv.show(@editor)
+      else if (match = line.match(@citeRex))
+        @cv.show(@editor)
+      #Check if the previous line contains a \begin{something} or \[.
       #If it does, try to find the closing item, and if that doesn't exist put it in.
       else if pos[0]>1
         previousLine = @editor.lineTextForBufferRow(pos[0]-1)
@@ -56,6 +58,8 @@ module.exports =
           else
             beginText = "\\begin{#{match[1]}}"
             endText = "\\end{#{match[1]}}"
+          remainingOnPrevLine = previousLine.substring(previousLine.indexOf(beginText))
+          return if remainingOnPrevLine.indexOf(endText) isnt -1
           if (not remainingText?) or (remainingText.indexOf(endText) < 0) or ((remainingText.indexOf(beginText) < remainingText.indexOf(endText)) and (remainingText.indexOf(beginText) > 0))
             @editor.insertText "\n"
             @editor.insertText endText

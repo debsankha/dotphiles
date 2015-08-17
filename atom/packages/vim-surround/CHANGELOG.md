@@ -1,3 +1,14 @@
+## 0.8.0
+* Tentative support for
+  [vim-mode-next](https://atom.io/packages/vim-mode-next). See
+  [#28](https://github.com/gepoch/vim-surround/issues/28).
+
+## 0.7.4
+* Bugfixes.
+
+## 0.7.3
+* Fixed problems cause by vim-mode changing "command-mode" to "normal-mode".
+
 ## 0.7.1
 * Propagate README changes.
 

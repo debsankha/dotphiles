@@ -9,9 +9,12 @@
 
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
+    name = "Andreas Sorge"
+    email = "as@asorge.de"
     #signingkey = **Your GPG ID**
+
+[github]
+    user = andsor
 
 [branch "master"]
     remote = origin
@@ -58,12 +61,23 @@
 [difftool]
     prompt = false
 
+[difftool.latex]
+    cmd = latexdiff "$LOCAL" "$REMOTE"
+
+[branch]
+    autosetuprebase = always
+    autosetupmerge = always
+
+[pull]
+    rebase = preserve
+
 [merge]
     tool = vimdiff
 
 [alias]
     # branch
     b  = branch
+    br = branch
     bc = checkout -b
     bl = branch -v
     bL = branch -av
@@ -99,6 +113,7 @@
 
     # commit
     c      = commit -v
+    ci     = commit
     ca     = commit --all -v
     cm     = commit --message
     cam    = commit --all --message
@@ -116,6 +131,7 @@
 
     # index
     s  = status
+    st = status
     a  = add
     ia = add
     ir = reset
@@ -132,6 +148,7 @@
 
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --decorate
 
     # remote
     re  = remote
