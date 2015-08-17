@@ -19,8 +19,8 @@ set wrapcomment none
 set showneartags 1
 set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
-set bgcolor white
-set fgcolor black
+set bgcolor black
+set fgcolor white
 set colors {green red blue magenta darkgrey brown orange}
 set diffcolors {red "#00a000" blue}
 set diffcontext 3
