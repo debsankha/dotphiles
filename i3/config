@@ -208,7 +208,7 @@ exec --no-startup-id glipper
 # flux
 exec --no-startup-id xflux -l 52 -g 10
 
-exec sudo /home/sorge/.i3/8648921/i3-battery-indicator
+exec sudo /home/sorge/.i3/i3-battery-indicator
 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10%
