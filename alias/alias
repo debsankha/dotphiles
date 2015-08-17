@@ -1,5 +1,5 @@
 alias nemon='nemo --no-desktop '
-alias vi='gvim '
+type gvim >/dev/null 2>&1 && alias vi='gvim '
 alias ls='ls -ltrah --color '
 alias gs='git status -sb '
 alias ga='git add '
