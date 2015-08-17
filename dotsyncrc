@@ -23,6 +23,7 @@ bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
 atom
 latexmkrc/latexmkrc
+alias/alias
 #ack/ackrc
 #aptitude
 #ctags/ctags
