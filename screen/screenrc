@@ -64,7 +64,7 @@ setenv SSH_AUTH_SOCK "/tmp/ssh-agent-$USER"
 # shell:  Default process started in screen's windows.
 # Makes it possible to use a different shell inside screen
 # than is set as the default login shell.  Halleluja! :-)
-shell                 -zsh
+shell                 -bash
 # shell                 bash
 # shell                 ksh
 #
@@ -320,7 +320,7 @@ hardstatus alwayslastline "%{= kw} %-Lw%{=b Kw} %n%f %t %{-}%+Lw %=%{= dd}"
 #
 # BUUG - Berlin Unix User Group - read some news about Unix
 #  bind B screen -t 'buug' 4 links www.buug.de
- bind b windowlist -b # make it like emacs
+bind b windowlist -b # make it like emacs
 # CHEM - LinuxTag event in Chemnitz -- 2002-03-09 + 2002-03-10
 #  bind C screen -t 'CHEM' 9 links www.tu-chemnitz.de/linux/tag/
 # NOTE:  This overrides the default binding for the "clear" command.
@@ -342,7 +342,7 @@ hardstatus alwayslastline "%{= kw} %-Lw%{=b Kw} %n%f %t %{-}%+Lw %=%{= dd}"
 # see also:  http://www.math.fu-berlin.de/~guckes/ncftp/
 #
 # GOOGLE - Web Search Engine
-  bind ^g  screen -t 'Google' links www.google.com
+#  bind ^g  screen -t 'Google' links www.google.com
 #
 # HEISE - IT NewsTicker
 # bind H log # default!

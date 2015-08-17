@@ -60,7 +60,7 @@ gitk
 #ruby/rdebugrc
 #ruby/aprc
 #ruby/caprc
-#screen/screenrc
+screen/screenrc
 #shell/hushlogin
 #shell/urlview
 #ssh
