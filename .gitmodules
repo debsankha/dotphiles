@@ -16,3 +16,6 @@
 [submodule "vim/dotvim"]
 	path = vim/dotvim
 	url = git://github.com/dotphiles/dotvim.git
+[submodule "liquidprompt/liquidprompt"]
+	path = liquidprompt/liquidprompt
+	url = git://github.com/nojhan/liquidprompt.git

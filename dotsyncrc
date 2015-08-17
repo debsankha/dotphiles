@@ -22,6 +22,7 @@ i3
 bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
 atom
+liquidprompt/liquidprompt:local/liquidprompt
 latexmkrc/latexmkrc
 alias/alias
 #ack/ackrc
