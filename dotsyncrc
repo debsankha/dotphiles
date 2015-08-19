@@ -26,6 +26,7 @@ liquidprompt/liquidprompt:local/liquidprompt
 liquidprompt/liquidpromptrc:.config/liquidpromptrc
 latexmkrc/latexmkrc
 alias/alias
+ipython
 #ack/ackrc
 #aptitude
 #ctags/ctags
