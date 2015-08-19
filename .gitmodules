@@ -16,3 +16,6 @@
 [submodule "liquidprompt/liquidprompt"]
 	path = liquidprompt/liquidprompt
 	url = git://github.com/nojhan/liquidprompt.git
+[submodule "ipython/jupyter-themes"]
+	path = ipython/jupyter-themes
+	url = git://github.com/dunovank/jupyter-themes
