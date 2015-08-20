@@ -19,3 +19,6 @@
 [submodule "ipython/jupyter-themes"]
 	path = ipython/jupyter-themes
 	url = git://github.com/dunovank/jupyter-themes
+[submodule "ipython/nbextensions/mathjax"]
+	path = ipython/nbextensions/mathjax
+	url = git://github.com/mathjax/mathjax
