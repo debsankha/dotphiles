@@ -86,7 +86,7 @@ screen/screenrc
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-sheldon                          git=NONE
+sheldon                          git=NONE                       files=gnucash/saved-reports-2.4:.gnucash/saved-reports-2.4
 fassberg-login                   git=sheldon
 login01                          git=NONE
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile

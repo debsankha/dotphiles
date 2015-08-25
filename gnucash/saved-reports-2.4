@@ -1,0 +1,295 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Expense Accounts", based on template "9bf1892805cb4336be6320fe48ce5446"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "9bf1892805cb4336be6320fe48ce5446" "Expense Accounts")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 800.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1000.0))) option))
+
+
+; Section: __report
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Expense Accounts"
+  'report-guid "7bb2cbdc800180676cb7dac0bcfd3eba"
+  'parent-type "9bf1892805cb4336be6320fe48ce5446"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "9bf1892805cb4336be6320fe48ce5446" "Expense Accounts")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Liabilities Over Time", based on template "faf410e8f8da481fbc09e4763da40bcc"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time")))
+
+; Section: General
+
+
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Show Accounts until level")))
+  ((lambda (option) (if option ((gnc:option-setter option) '3))) option))
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 500.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1200.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+
+; Section: __report
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Liabilities Over Time"
+  'report-guid "07429ed9dd02d53fa5d43bf4a7933bb9"
+  'parent-type "faf410e8f8da481fbc09e4763da40bcc"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Assets Barchart", based on template "5c7fd8a1fe9a4cd38884ff54214aa88a"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "5c7fd8a1fe9a4cd38884ff54214aa88a" "Assets")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 600.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1000.0))) option))
+
+
+; Section: __report
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Assets Barchart"
+  'report-guid "e0546247c51986381bbfdd0ec3553d77"
+  'parent-type "5c7fd8a1fe9a4cd38884ff54214aa88a"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "5c7fd8a1fe9a4cd38884ff54214aa88a" "Assets")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Expense Over Time", based on template "b1f15b2052c149df93e698fe85a81ea6"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 500.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1200.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+
+; Section: __report
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Expense Over Time"
+  'report-guid "f0fe8ec4efc088d24dbd5575a3fb2b41"
+  'parent-type "b1f15b2052c149df93e698fe85a81ea6"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Income/Expense Chart", based on template "80769921e87943adade887b9835a7685"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "80769921e87943adade887b9835a7685" "Income/Expense Chart")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 500.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1200.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Income/Expense Chart"
+  'report-guid "e9267c6fa410eac98f80605d5141f458"
+  'parent-type "80769921e87943adade887b9835a7685"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "80769921e87943adade887b9835a7685" "Income/Expense Chart")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Average Balance", based on template "d5adcc61c62e4b8684dd8907448d7900"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "d5adcc61c62e4b8684dd8907448d7900" "Average Balance")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 400.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1200.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Average Balance"
+  'report-guid "5c15cde02170d27d1914968a188a2f06"
+  'parent-type "d5adcc61c62e4b8684dd8907448d7900"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "d5adcc61c62e4b8684dd8907448d7900" "Average Balance")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Net Worth Linechart", based on template "d8b63264186b11e19038001558291366"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "d8b63264186b11e19038001558291366" "Net Worth Linechart")))
+
+; Section: General
+
+
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (option) (if option ((gnc:option-setter option) '("18e9fdd489fbdfbc5ae8b2da24a900a3" "af4fcb58e81056b3c50ca962434c0902" "e960f2dd18bce76f272a78d4359c8544" "f755f4266eef99c12f01bc6cf0151c80" "f06434231f9c9396f17fb90e12e2499f" "4a28d92a465a5f2c28ae611db24a55ca" "b433c0a18a7facc19eb1db763bdd7e68" "a2743806e56b26ea3a5290fb550f9b5a" "4b422d1fb69f2f288f08a87b76883fe3" "e7d9b1d42cccb16406a32af8bbe9481b" "9ea249db91226ac9387b10bc9989f796" "fd887fa4db8d6d5b030905137033e997" "76d254390f0ffb0cd459d7c74bf7600c" "5350f472be25b5078b9c4c1d574b1c5c" "c491533657b0c4287d8010c80f960030" "02bd63b56b36223f9b2189220297b4c4" "34891131c54e48ec4081baae84500b29" "fba696a4a64dd48b445a70a9fc7fa3aa" "84dc004888d46a682f19fc6addbc131f" "eaaa7a20cd35462bf6a828672cafc350" "ad65452e9098e87ed3b385b1a4298e88" "1d2b2791154a5e714556506fa5a7fc83" "ca812b297c332e395c0bc7d02f0874db" "10c7d540c5dc3285ab1ac3d762daa17e")))) option))
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 500.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1000.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Grid")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Data markers?")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Net Worth Linechart"
+  'report-guid "3fd0da78aca627c637a61dc9381503a6"
+  'parent-type "d8b63264186b11e19038001558291366"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "d8b63264186b11e19038001558291366" "Net Worth Linechart")))
+
