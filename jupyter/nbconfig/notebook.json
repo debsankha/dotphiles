@@ -1,5 +1,5 @@
 {
   "load_extensions": {
-    "calico-document-tools.js": true
+    "calico-document-tools": true
   }
 }
