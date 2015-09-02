@@ -27,6 +27,8 @@ liquidprompt/liquidpromptrc:.config/liquidpromptrc
 latexmkrc/latexmkrc
 alias/alias
 ipython
+jupyter
+jupyter-nbextensions:.local/share/jupyter/nbextensions
 #ack/ackrc
 #aptitude
 #ctags/ctags

@@ -18,7 +18,7 @@
 	url = git://github.com/nojhan/liquidprompt.git
 [submodule "ipython/jupyter-themes"]
 	path = ipython/jupyter-themes
-	url = git://github.com/dunovank/jupyter-themes
-[submodule "ipython/nbextensions/mathjax"]
-	path = ipython/nbextensions/mathjax
-	url = git://github.com/mathjax/mathjax
+	url = git://github.com/andsor/jupyter-themes
+[submodule "jupyter-nbextensions/mathjax"]
+	path = jupyter-nbextensions/mathjax
+	url = https://github.com/mathjax/mathjax
