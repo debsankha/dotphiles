@@ -162,6 +162,48 @@
   'renderer (gnc:report-template-renderer/report-guid "b1f15b2052c149df93e698fe85a81ea6" "Expense Over Time")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Assets Over Time", based on template "e9cf815f79db44bcb637d0295093ae3d"
+(let ()
+ (define (options-gen)
+  (let ((options (gnc:report-template-new-options/report-guid "e9cf815f79db44bcb637d0295093ae3d" "Assets Over Time")))
+
+; Section: General
+
+
+; Section: Accounts
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Height")))
+  ((lambda (option) (if option ((gnc:option-setter option) 500.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Plot Width")))
+  ((lambda (option) (if option ((gnc:option-setter option) 1200.0))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show table")))
+  ((lambda (option) (if option ((gnc:option-setter option) #t))) option))
+
+
+; Section: __report
+
+  options))
+ (gnc:define-report 
+  'version 1
+  'name "Assets Over Time"
+  'report-guid "77cdfa704eb2f04d1aca0096150d7af3"
+  'parent-type "e9cf815f79db44bcb637d0295093ae3d"
+  'options-generator options-gen
+  'menu-path (list gnc:menuname-custom)
+  'renderer (gnc:report-template-renderer/report-guid "e9cf815f79db44bcb637d0295093ae3d" "Assets Over Time")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Options for saved report "Income/Expense Chart", based on template "80769921e87943adade887b9835a7685"
 (let ()
  (define (options-gen)
