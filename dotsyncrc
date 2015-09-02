@@ -18,6 +18,8 @@
 [files]
 # Uncomment examples below
 dotsyncrc
+bash_profile
+bashrc
 i3
 bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini

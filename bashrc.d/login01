@@ -1,0 +1,28 @@
+umask 0077
+
+# Clustername
+CLUSTERNAME=`hostname | grep -o "[[:alpha:]]*"`
+
+if [[ x$CLUSTERNAME = xlogin || x$CLUSTERNAME = xfrigg || x$CLUSTERNAME = xskadi || x$CLUSTERNAME = xfulla || x$CLUSTERNAME = xnavier || x$CLUSTERNAME = xull ]]; then
+    export CLUSTERNAME=$CLUSTERNAME
+
+    # git
+    export PATH=$PATH:/home/dmanik/usr/bin
+fi
+
+if [[ x$CLUSTERNAME = xlogin ]]; then
+    # Tox settings
+    export TOX_PIP_INSTALL_OPTIONS="--trusted-host pypi.python.org"
+fi
+
+if [[ x$CLUSTERNAME = xtupungato || x$CLUSTERNAME = xcay || x$CLUSTERNAME == xuturunco ]]; then
+    export CLUSTERNAME=desktop
+fi
+
+if [[ x$CLUSTERNAME == xdesktop || $SGE_CLUSTER_NAME ]]; then
+    ENVDIR=$HOME/envs/$CLUSTERNAME
+    mkdir -p $ENVDIR
+    export ENVDIR=$ENVDIR
+
+    export PATH=$ENVDIR/bin:${PATH}
+fi

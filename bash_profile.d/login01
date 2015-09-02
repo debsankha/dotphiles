@@ -1,0 +1,8 @@
+# Aliases
+test -s ~/.alias && . ~/.alias || true
+
+# LiquidPrompt
+source ~/local/liquidprompt/liquidprompt
+
+# Source queueing system settings
+source /core/ge/NLD/common/settings.sh
