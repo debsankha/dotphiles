@@ -1,6 +1,5 @@
 {
   "load_extensions": {
-    "calico-document-tools.js": true,
-    "mathjax": true,
+    "calico-document-tools.js": true
   }
 }
