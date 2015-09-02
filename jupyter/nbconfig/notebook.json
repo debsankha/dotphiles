@@ -1,5 +1,6 @@
 {
   "load_extensions": {
-    "calico-document-tools": true
+    "calico-document-tools": true,
+    "calico-cell-tools": true
   }
 }
