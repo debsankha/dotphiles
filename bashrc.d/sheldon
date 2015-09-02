@@ -1,0 +1,7 @@
+
+# added by Miniconda3 3.10.1 installer
+export PATH="/home/sorge/local/miniconda3/bin:$PATH"
+export PYTHONNOUSERSITE=True
+
+# added by travis gem
+[ -f /home/sorge/.travis/travis.sh ] && source /home/sorge/.travis/travis.sh

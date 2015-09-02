@@ -1,0 +1,7 @@
+test -s ~/.alias && . ~/.alias || true
+
+source ~/repos/liquidprompt/liquidprompt
+
+setxkbmap -option grp:switch,grp:alt_space_toggle,lv3:ralt_switch,eurosign:e de,us
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
