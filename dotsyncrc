@@ -18,14 +18,10 @@
 [files]
 # Uncomment examples below
 dotsyncrc
-bash_profile
-bashrc
-i3
+#bash_profile
+#bashrc
 bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
-atom
-liquidprompt/liquidprompt:local/liquidprompt
-liquidprompt/liquidpromptrc:.config/liquidpromptrc
 latexmkrc/latexmkrc
 alias/alias
 ipython
@@ -74,9 +70,9 @@ screen/screenrc
 #task/taskrc
 #tmux/tmux.conf
 #tmux/tmuxinator
-#vim/dotvim:.vim
-#vim/vimrc
-#vim/gvimrc
+vim/dotvim:.vim
+vim/vimrc
+vim/gvimrc
 #wget/wgetrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
@@ -90,9 +86,11 @@ screen/screenrc
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-sheldon                          git=NONE                       files=gnucash/saved-reports-2.4:.gnucash/saved-reports-2.4
-fassberg-login                   git=sheldon
-login01                          git=NONE
+etna                             git=NONE
+chao                             git=NONE
+#sheldon                          git=NONE                       files=gnucash/saved-reports-2.4:.gnucash/saved-reports-2.4
+#fassberg-login                   git=sheldon
+#login01                          git=NONE
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
