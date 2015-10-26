@@ -54,7 +54,7 @@
 # c.InteractiveShellApp.gui = None
 
 # A file to be run
-# c.InteractiveShellApp.file_to_run = ''
+c.InteractiveShellApp.file_to_run = './startup/setup_matplotlib.py'
 
 # Run the module as a script.
 # c.InteractiveShellApp.module_to_run = ''
@@ -63,8 +63,6 @@
 # c.InteractiveShellApp.matplotlib = 'inline'
 
 # Execute the given command string.
-c.InteractiveShellApp.code_to_run = 'import numpy as np;import networkx as nx;\
-        import matplotlib.pyplot as plt;import seaborn as sns;sns.set_palette("husl")'
 
 # lines of code to run at IPython startup.
 # c.InteractiveShellApp.exec_lines = traitlets.Undefined

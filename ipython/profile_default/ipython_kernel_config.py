@@ -5,27 +5,6 @@
 #------------------------------------------------------------------------------
 # Configure matplotlib for interactive use with the default matplotlib backend.
 c.IPKernelApp.matplotlib = 'inline'
-c.InlineBackend.rc = {'figure.figsize': (10.0, 7.5),\
-     'figure.facecolor': 'white',\
-	 'savefig.dpi': 300,\
-     'figure.subplot.bottom': 0.125,\
-	 'figure.edgecolor': 'white',\
-	 'axes.titlesize': 'x-large',\
-     'font.size': 30.0,\
-     'xtick.labelsize': 'large',\
-     'ytick.labelsize': 'large',\
-     'xtick.major.size': 10,\
-     'xtick.minor.size': 5,\
-	 'ytick.major.size': 10,\
-     'ytick.minor.size': 5,\
-     'xtick.direction': 'in',\
-     'ytick.direction': 'in',\
-     'axes.labelsize': 'large',\
-     'axes.linewidth': 3.0,\
-	 'legend.fancybox': True, \
-     'legend.framealpha': 0.1,\
-     'legend.fontsize': 'large',\
-	 'lines.linewidth': 3}
 c.InlineBackend.figure_formats = ['svg']
 
 #------------------------------------------------------------------------------
