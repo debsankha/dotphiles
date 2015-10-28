@@ -76,11 +76,7 @@ vim/dotvim:.vim
 vim/vimrc
 vim/gvimrc
 #wget/wgetrc
-xmonad/xmonad.hs:.xmonad/xmonad.hs
-xmonad/dzen2_scripts:.xmonad/dzen2_scripts
-xmonad/dzen2_icons:.xmonad/dzen2_icons
-xmonad/xmonad_scripts:.xmonad/xmonad_scripts
-xmonad/conky_dzen:.xmonad/conky_dzen
+xmonad
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
 #zsh/zlogin
