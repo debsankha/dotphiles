@@ -25,4 +25,5 @@ if has("user_commands")
 endif
 
 " Customize to your needs...
-
+let g:base16_shell_path='~/.colorschemes/base16-shell'
+let base16colorspace=256
