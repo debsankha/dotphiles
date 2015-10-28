@@ -19,7 +19,7 @@
 # Uncomment examples below
 dotsyncrc
 #bash_profile
-#bashrc
+bashrc
 bin:bin
 gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
 latexmkrc/latexmkrc
@@ -27,6 +27,7 @@ alias/alias
 ipython
 jupyter
 jupyter-nbextensions:.local/share/jupyter/nbextensions
+colorschemes #For base16 in mate terminal
 #ack/ackrc
 #aptitude
 #ctags/ctags
