@@ -1,3 +1,4 @@
+import os
 # Configuration file for ipython.
 
 #------------------------------------------------------------------------------
@@ -54,7 +55,8 @@
 # c.InteractiveShellApp.gui = None
 
 # A file to be run
-c.InteractiveShellApp.file_to_run = './startup/setup_matplotlib.py'
+scriptdir = os.path.dirname(os.path.realpath(__file__))
+c.InteractiveShellApp.file_to_run = os.path.join(scriptdir, 'startup/setup-matplotlib.py' )
 
 # Run the module as a script.
 # c.InteractiveShellApp.module_to_run = ''
