@@ -24,6 +24,8 @@ if has("user_commands")
   " Bundle 'reponame'
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'https://github.com/davidhalter/jedi-vim'
+  Bundle 'https://github.com/ervandew/supertab'
 endif
 
 " Customize to your needs...
