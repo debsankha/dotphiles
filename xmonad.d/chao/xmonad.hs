@@ -34,6 +34,10 @@ import Data.Ratio ((%))
 -- stuff for multimedia keys
 import Graphics.X11.ExtraTypes.XF86
 
+-- Dynamic workspace grouping
+import XMonad.Actions.DynamicWorkspaceGroups
+import XMonad.Prompt
+
 
 --import qualified Codec.Binary.UTF8.String as UTF8
 
@@ -131,6 +135,33 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+
+   -- Workspace grouping
+   ++
+   [((modm .|. shiftMask, xK_n     ), promptWSGroupAdd myXPConfig "Name this group: ")
+   ,((modm .|. shiftMask, xK_g     ), promptWSGroupView myXPConfig "Go to group: ")
+   ,((modm .|. shiftMask, xK_d     ), promptWSGroupForget myXPConfig "Forget group: ")]
+
+-- Some weird stuff foe dynamicworkspacegrouping
+--
+myNormalBorderColor  = "#444488"
+myFocusedBorderColor = "#ee9999"
+myBgColor= "#007A7A"
+myFgColor = "#bbbbdd"
+myBgHLight= "#99CACA"
+myFgHLight= "#EBF4F4"
+
+myXPConfig :: XPConfig
+myXPConfig = defaultXPConfig
+              { font        = "xft:Terminus:pixelsize=16"
+	      , bgColor     = myBgColor
+	      , fgColor     = myFgColor
+	      , bgHLight    = myBgHLight
+	      , fgHLight    = myFgHLight
+              , borderColor = myNormalBorderColor
+              }
+
+
 
 
 --dzen stuff
