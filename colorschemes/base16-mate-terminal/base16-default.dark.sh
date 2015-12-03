@@ -27,13 +27,12 @@ glist_append() {
       echo "'$val'"
     } | head -c-1 | tr "\n" ,
   )"
-
+  echo $key $entries
   "$DCONFTOOL" write "$key" "[$entries]"
 }
 
 # Append the Base16 profile to the profile list
 glist_append /org/mate/terminal/global/profile-list "$PROFILE_SLUG"
-
 dset visible-name "'$PROFILE_NAME'"
 dset palette "'#181818:#ab4642:#a1b56c:#f7ca88:#7cafc2:#ba8baf:#86c1b9:#d8d8d8:#585858:#ab4642:#a1b56c:#f7ca88:#7cafc2:#ba8baf:#86c1b9:#f8f8f8'"
 dset background-color "'#181818'"

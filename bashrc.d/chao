@@ -3,8 +3,8 @@ export PATH=/opt/intel/bin:$PATH
 export LD_LIBRARY_PATH=/opt/intel/composer_xe_2015/mkl/lib/intel64:/opt/intel/composer_xe_2015/lib/intel64:$LD_LIBRARY_PATH
 source $HOME/venvs/networks/bin/activate
 
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL="$HOME/.colorschemes/base16-shell/base16-solarized.light.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 
 tunnel()
@@ -25,4 +25,4 @@ alias mendeley="sudo mendeley_jailed"
 
 # added by travis gem
 [ -f /home/dmanik/.travis/travis.sh ] && source /home/dmanik/.travis/travis.sh
-
+export HTTP_PROXY='127.0.0.1:9956'

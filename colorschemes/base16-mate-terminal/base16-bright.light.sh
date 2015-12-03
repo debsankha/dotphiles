@@ -31,6 +31,7 @@ glist_append() {
   "$DCONFTOOL" write "$key" "[$entries]"
 }
 
+echo $DCONFTOOL
 # Append the Base16 profile to the profile list
 glist_append /org/mate/terminal/global/profile-list "$PROFILE_SLUG"
 
