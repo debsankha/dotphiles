@@ -18,16 +18,33 @@ if has("user_commands")
   "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
   let g:vundles=['general', 'programming']
   let g:neocomplcache_enable_at_startup = 1
+  " Ask it to use python3
+  let g:pymode_python = 'python3'
+  let g:virtualenv_directory='/home/dmanik/venvs'
+
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'https://github.com/jmcantrell/vim-virtualenv.git'
+  Bundle 'https://github.com/vim-scripts/auctex.vim'
   Bundle 'https://github.com/davidhalter/jedi-vim'
   Bundle 'https://github.com/ervandew/supertab'
+  Bundle 'https://github.com/nvie/vim-pyunit.git'
+  Bundle 'https://github.com/tell-k/vim-autopep8.git'
+  Bundle 'https://github.com/tpope/vim-fugitive.git'
 endif
 
 " Customize to your needs...
 let g:base16_shell_path='~/.colorschemes/base16-shell'
 let base16colorspace=256
+
+" Customize  pyunit
+noremap <F5> :call PyUnitRunTests()<CR>
+noremap! <F5> :call PyUnitRunTests()<CR>
+
+
+" Enable auto wrapping lines
+set textwidth = 77
