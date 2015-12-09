@@ -45,3 +45,23 @@ if echo $1 | grep fb
               ssh loginfb -W $HOST:22
  
 fi
+
+if [ "$1" = "frontend" ]
+	then ssh loginfb -W 172.16.10.46:22
+fi
+
+if [ "$1" = "fir" ]
+	then ssh loginbs -W 192.168.219.125:22
+fi
+
+if [ "$1" = "spruce" ]
+	then ssh loginbs -W 192.168.219.126:22
+fi
+
+if [ "$1" = "jorcada" ]
+	then ssh loginbs -W jorcada:22
+fi
+
+if echo $1 | grep "10.216.80"
+	then ssh frontend -W $1:22
+fi
