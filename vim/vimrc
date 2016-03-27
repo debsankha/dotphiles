@@ -22,6 +22,8 @@ if has("user_commands")
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
+  Bundle 'godlygeek/tabular'
+  Bundle 'plasticboy/vim-markdown'
 endif
 
 " Customize to your needs...
