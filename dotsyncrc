@@ -90,7 +90,7 @@ xmonad
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
 etna                             git=NONE
-chao                             git=NONE
+chao                             git=NONE                       files=cups/client.conf:.cups/client.conf
 #sheldon                          git=NONE                       files=gnucash/saved-reports-2.4:.gnucash/saved-reports-2.4
 #fassberg-login                   git=sheldon
 #login01                          git=NONE
