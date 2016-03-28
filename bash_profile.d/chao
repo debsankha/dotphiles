@@ -1,0 +1,5 @@
+export HTTP_PROXY='http://127.0.0.1:9956'
+#BASE16_SHELL="$HOME/.colorschemes/base16-shell/base16-solarized.light.sh"
+#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+source $HOME/.colorschemes/base16-mate-terminal/base16-solarized.light.sh
