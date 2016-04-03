@@ -1,5 +1,12 @@
 # Configuration file for jupyter-notebook.
 
+c.TerminalIPythonApp.extensions = [
+                'memory_profiler_ext',
+                ]
+c.InteractiveShellApp.extensions = [
+                'memory_profiler_ext',
+                ]
+
 #------------------------------------------------------------------------------
 # Configurable configuration
 #------------------------------------------------------------------------------

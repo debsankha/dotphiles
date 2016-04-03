@@ -1,1 +1,8 @@
-source $HOME/.colorschemes/base16-mate-terminal/base16-solarized.light.sh
+
+function setUp
+{
+  source ~/venvs/findaprof/bin/activate
+  source ~/findaprof/featurextract/featurextract/identif.secrets.sh
+}
+
+alias ustunnel='ssh -D 12345 root@loki.debsankha.net'
