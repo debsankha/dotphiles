@@ -19,3 +19,6 @@
 [submodule "ipython/jupyter-themes"]
 	path = ipython/jupyter-themes
 	url = git://github.com/andsor/jupyter-themes
+[submodule "colorschemes/base16-shell"]
+	path = colorschemes/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
