@@ -45,6 +45,8 @@ let base16colorspace=256
 noremap <F5> :call PyUnitRunTests()<CR>
 noremap! <F5> :call PyUnitRunTests()<CR>
 
+" Disable mouse
+set mouse=
 
 " Enable auto wrapping lines
 set textwidth = 77
