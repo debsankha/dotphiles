@@ -53,3 +53,4 @@ set textwidth = 77
 
 " fix weird cursor jumping to beginning of file on save
 let g:syntastic_auto_jump = 0
+set expandtab
