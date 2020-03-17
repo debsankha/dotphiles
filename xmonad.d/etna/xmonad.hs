@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Config.Gnome
+--import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Layout.IndependentScreens
 import qualified Data.Map        as M
@@ -34,11 +35,16 @@ import Data.Ratio ((%))
 -- stuff for multimedia keys
 import Graphics.X11.ExtraTypes.XF86
 
+-- Dynamic workspace grouping
+import XMonad.Actions.DynamicWorkspaceGroups
+import XMonad.Prompt
+
+
 
 --import qualified Codec.Binary.UTF8.String as UTF8
 
 myWorkspaces    =  withScreens 2 ["1","2","3","4","5","6","7","8","9"]
-myBitmapsDir = "/home/dmanik/.xmonad/dzen2"
+myBitmapsDir = "/home/dmanik/.xmonad/dzen2_icons"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
  
@@ -138,6 +144,34 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
+   -- Workspace grouping
+   ++
+   [((modm .|. shiftMask, xK_n     ), promptWSGroupAdd myXPConfig "Name this group: ")
+   ,((modm .|. shiftMask, xK_g     ), promptWSGroupView myXPConfig "Go to group: ")
+   ,((modm .|. shiftMask, xK_d     ), promptWSGroupForget myXPConfig "Forget group: ")]
+
+-- Some weird stuff foe dynamicworkspacegrouping
+--
+myNormalBorderColor  = "#444488"
+myFocusedBorderColor = "#ee9999"
+myBgColor= "#007A7A"
+myFgColor = "#bbbbdd"
+myBgHLight= "#99CACA"
+myFgHLight= "#EBF4F4"
+
+myXPConfig :: XPConfig
+myXPConfig = defaultXPConfig
+              { font        = "xft:Terminus:pixelsize=16"
+	      , bgColor     = myBgColor
+	      , fgColor     = myFgColor
+	      , bgHLight    = myBgHLight
+	      , fgHLight    = myFgHLight
+              , borderColor = myNormalBorderColor
+              }
+
+
+
+
 
 --dzen stuff
 myLogHook :: Handle -> X ()
@@ -161,7 +195,7 @@ myLogHook h = dynamicLogWithPP $ defaultPP
       , ppOutput            =   hPutStrLn h
     }
 
-myXmonadBar = "dzen2 -x '0' -y '0' -h '24' -w '1920' -ta 'l' -fg '#FFFFFF' -bg '#1B1D1E'"
+myXmonadBar = "dzen2 -dock -x '0' -y '0' -h '24' -w '1920' -ta 'l' -fg '#FFFFFF' -bg '#1B1D1E'"
 
 myStatusBar = "conky -c ~/.xmonad/.conky_dzen | dzen2 -x '1921' -w '1024' -h '24' -ta 'r' -bg '#1B1D1E' -fg '#FFFFFF' -y '0'"
  
